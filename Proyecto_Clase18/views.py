@@ -1,7 +1,7 @@
 from django.template import loader, Template, Context
 from django.http import HttpResponse
 from AppFamilia.models import Familia
-from AppFamilia.models import CargaFormulario 
+#from AppFamilia.models import CargaFormulario 
 from django.shortcuts import render, redirect
 
 
@@ -18,15 +18,15 @@ def registro(request):
     return HttpResponse("Registro exitoso")
 
 
-def cargar_datos(request):
-    if request.method == "POST":
-        form = CargaFormulario(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('index')
-    else:
-        form = CargaFormulario()
-    return render(request, 'carga_datos.html', {'form': form})
+# def cargar_datos(request):
+#     if request.method == "POST":
+#         form = CargaFormulario(request.POST)
+#         if form.is_valid():
+#             form.save()
+#             return redirect('index')
+#     else:
+#         form = CargaFormulario()
+#     return render(request, 'carga_datos.html', {'form': form})
         
 
     

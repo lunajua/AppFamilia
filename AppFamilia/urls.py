@@ -1,4 +1,7 @@
 from django.urls import path
-from AppFamilia.views import autor_create_view
+from AppFamilia.views import cargar_datos
 
-urlpatterns = [path("index/", autor_create_view)]
+urlpatterns = [
+    path("index/", cargar_datos, name="index"),
+               
+]

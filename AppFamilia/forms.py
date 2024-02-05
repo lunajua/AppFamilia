@@ -1,11 +1,13 @@
-from django import forms
+
 from AppFamilia.models import Familia
+from django import forms
+
 
 class CargaFormulario(forms.ModelForm):
     class Meta:
         model = Familia
-        campos = ['nombre', 'apellido', 'edad', 'fecha_nacimiento']   
-        
+        fields = "__all__"
+
          
     
     
